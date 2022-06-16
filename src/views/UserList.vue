@@ -1,26 +1,26 @@
 <template>
-<div class="container mx-auto xs:mx-10">
-  <div class="bg-gray-300">
-    <navbar-main/>
-  </div>
+<div class="dark:bg-slate-900 ">
   <div class="">
+    <navbar-main class=""/>
+  </div>
+  <div class="container mx-auto px-20 pb-10">
     <ListMain/>
   </div>
-  <div class="flex justify-center">
+  <!-- <div class="flex justify-center">
     <pagination-main/>
-  </div>
+  </div> -->
 </div>
 </template>
 
 <script>
-import PaginationMain from '@/components/PaginationMain.vue'
+// import PaginationMain from '@/components/PaginationMain.vue'
 import ListMain from '../components/ListMain.vue'
 import NavbarMain from '@/components/NavbarMain.vue'
 
 export default {
   components: {
     ListMain,
-    PaginationMain,
+    // PaginationMain,
     NavbarMain
   },
   computed: {

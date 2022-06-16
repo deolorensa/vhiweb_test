@@ -1,7 +1,7 @@
 <template>
-  <div class="relative" >
-    <div class="absolute m-auto left-0 right-0">
-      <div class="w-96 h-96 p-5 bg-gray-100 max-w-lg overflow-hidden rounded-lg shadow-md bg-white dark:bg-slate-800 border border-gray-50 dark:border-slate-900 hover:shadow-2xl transform transition duration-500 hover:scale-110 ">
+  <div class="" >
+    <div class="mt-20">
+      <div class="w-96 h-96 max-w-md mx-auto p-5 bg-slate-100 max-w-lg overflow-hidden rounded-lg shadow-md bg-white dark:bg-slate-800 border border-gray-50 dark:border-slate-900 hover:shadow-2xl transform transition duration-500 hover:scale-110 ">
         <p class="text-4xl text-gray-700 font-black text-center my-12">LOGIN</p>
         <label for="email" class="text-sm font-medium text-gray-900 dark:text-gray-300 mb-1">Your email</label>
         <input v-model="email" type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4" placeholder="name@flowbite.com" required>

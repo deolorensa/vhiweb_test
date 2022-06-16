@@ -1,8 +1,8 @@
 <template>
 <div>
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg ">
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead class="text-lg text-gray-700 bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+    <div class="relative overflow-x-auto shadow-md rounded ">
+        <table class="w-full text-md font-semibold text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-lg text-gray-900 bg-slate-300 dark:bg-slate-900 dark:text-white border border-2 border-gray-600 dark:border-bg-white">
                 <tr>
                     <th scope="col" class="px-6 py-3">
                         ID
@@ -22,7 +22,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(profile, index) in profileList" :key="index" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <tr v-for="(profile, index) in profileList" :key="index" class="bg-slate-100 hover:bg-white dark:hover:bg-slate-600 border-2 border-gray-600 dark:bg-gray-800 dark:border-gray-700">
                     <td class="px-6 py-4"> 
                         <router-link :to="{ name: 'detail', params: { id: profile.id } }">
                         {{ profile.id }} 

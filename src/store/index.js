@@ -10,8 +10,10 @@ export default new Vuex.Store({
     profileList: [],
     info: '',
     token: null,
+    dark: false
   },
   getters: {
+    dark: (state) => state.dark
   },
   mutations: {
     loginSucces(state, token) {
@@ -28,6 +30,9 @@ export default new Vuex.Store({
     },
     logout(state){
       state.token =null
+    },
+    SET_DARK: (state, bool) => {
+      state.dark = bool;
     }
   },
   actions: {
