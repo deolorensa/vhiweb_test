@@ -44,19 +44,6 @@ export default new Vuex.Store({
           .catch((error) => { store.commit("setInfo", error)
         })
     },
-    // fetchLogin(store, {email, password}){
-    //   console.log(email, password)
-    //   axios
-    //       .post('https://reqres.in/api/login',{email: email, password: password})
-    //       .then((response) => {
-    //         store.commit('setLogin', response.data);
-    //     })
-    //       .catch((error) => {
-    //         console.log(error)
-    //         store.commit("setError", error)
-          
-    //     })
-    // },
   },
   modules: {
   }

@@ -1,11 +1,13 @@
 # VHIWEB USER LIST APP
+
 ==
 ### Table of Content
-- [# VHIWEB USER LIST APP](#-vhiweb-user-list-app)
+- [VHIWEB USER LIST APP](#vhiweb-user-list-app)
     - [Table of Content](#table-of-content)
   - [User Interface - vue](#user-interface---vue)
   - [State Management - vuex](#state-management---vuex)
   - [Coding with Style - TailwindCSS](#coding-with-style---tailwindcss)
+  - [Alert - sweetalert2](#alert---sweetalert2)
   - [Package Management - npm](#package-management---npm)
   - [Linting JavaScript - ESLint](#linting-javascript---eslint)
   - [Deployment - netlify](#deployment---netlify)
@@ -29,6 +31,10 @@ Vuex adalah pola manajemen negara + perpustakaan untuk aplikasi Vue.js. Ini berf
 Tailwind CSS bekerja dengan memindai semua file HTML, komponen JavaScript, dan template lain untuk nama kelas, menghasilkan gaya yang sesuai, lalu menuliskannya ke file CSS statis.
 
 -Dokumentasi TailwindCSS (https://tailwindcss.com/)
+
+## Alert - sweetalert2
+
+- Dokumentasi sweetalert2 (https://sweetalert2.github.io/)
 
 ## Package Management - npm
 npm adalah manajer paket untuk bahasa pemrograman JavaScript yang dikelola oleh npm, Inc. npm adalah manajer paket default untuk lingkungan runtime JavaScript Node.js. Ini terdiri dari klien baris perintah, juga disebut npm, dan database online paket publik dan pribadi berbayar, yang disebut registri npm.

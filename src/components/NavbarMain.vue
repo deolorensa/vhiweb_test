@@ -56,28 +56,38 @@ export default {
       }
     },
     methods:{
-        ...mapMutations(['SET_DARK']),
+      ...mapMutations(['SET_DARK']),
         toggleDarkMode() {
         this.SET_DARK(!this.dark);
+      },
+      logout() {
+        this.$swal({
+          title: 'Logout ?',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#d33',
+          cancelButtonColor: '#757575',
+          confirmButtonText: 'Logout',
+          cancelButtonText: 'cancel',
+          closeOnConfirm: true,
+          closeOnCancel: true
+          }).then((result) => { 
+              if (result.value === true ) { 
+                this.alertLogoutSucces()
+                this.$store.commit('logout')
+                this.$router.replace({ name: "login" })
+              } 
+          }) 
         },
-        logout() {
-          this.$swal({
-            title: 'Logout ?',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#757575',
-            confirmButtonText: 'Logout',
-            cancelButtonText: 'cancel',
-            closeOnConfirm: true,
-            closeOnCancel: true
-            }).then((result) => { 
-                if (result.value === true ) { 
-                  this.$store.commit('logout')
-                  this.$router.replace({ name: "login" })
-                } 
-            }) 
-          },
+      alertLogoutSucces(){
+        this.$swal({
+          position: 'center',
+          icon: 'success',
+          title: 'Logout Succes',
+          showAlertLogoutSucces: false,
+          timer: 1500
+          });
+        },
     },
     computed: {
       ...mapGetters(['dark'])
