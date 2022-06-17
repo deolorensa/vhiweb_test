@@ -29,22 +29,10 @@
                 />
               </svg>
             </button>
-            <button @click="logoutButton()" class="p-1.5 rounded-lg font-semibold border border-2 bg-gray-300 text-black hover:bg-gray-400 hover:text-white dark:hover:bg-slate-800 dark:bg-slate-700 dark:text-white">Logout</button>
+            <button @click="logout()" class="p-1.5 rounded-lg font-semibold border border-2 bg-gray-300 text-black hover:bg-gray-400 hover:text-white dark:hover:bg-slate-800 dark:bg-slate-700 dark:text-white">Logout</button>
         </div>
     </div>
   </nav>
-<!-- <div class="bg-white dark:bg-slate-900 border-gray-200 dark:border-black border shadow-lg shadow-gray-200 dark:shadow-black">
-    <nav class="container mx-auto flex flex-wrap justify-between items-center py-3 px-3 mb-10 ">
-        <div class="flex items-center flex-shrink-0 ">
-            <span class="font-black text-3xl font-bold text-gray-900 dark:text-white">USERLIST APP</span>
-        </div>
-        <div>
-            <div class="text-lg lg:flex-grow">
-                <button @click="logoutButton()" class="p-1.5 rounded-lg font-semibold border border-2 bg-gray-300 text-black hover:bg-gray-400 hover:text-white dark:bg-slate-700 ">Logout</button>
-            </div>
-        </div>
-    </nav>
-</div> -->
 </template>
 
 <script>
@@ -68,28 +56,28 @@ export default {
       }
     },
     methods:{
-        logoutButton() {
-            this.$store.commit('logout')
-            this.$router.replace({ name: "login" })
-            this.alertLogoutSucces()
-        },
-        alertLogoutSucces(){
-        this.$swal({
-            position: 'center',
-            icon: 'success',
-            title: 'Berhasil Melakukan Logout !',
-            showAlertLogoutSucces: false,
-            timer: 1500
-        });
-      },
         ...mapMutations(['SET_DARK']),
         toggleDarkMode() {
         this.SET_DARK(!this.dark);
-      },
-            // toggleDarkMode(){
-      // this.isDark = !this.isDark;
-      // localStorage.setItem('darkMode', this.isDark);
-      // },
+        },
+        logout() {
+          this.$swal({
+            title: 'Logout ?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#757575',
+            confirmButtonText: 'Logout',
+            cancelButtonText: 'cancel',
+            closeOnConfirm: true,
+            closeOnCancel: true
+            }).then((result) => { 
+                if (result.value === true ) { 
+                  this.$store.commit('logout')
+                  this.$router.replace({ name: "login" })
+                } 
+            }) 
+          },
     },
     computed: {
       ...mapGetters(['dark'])

@@ -9,6 +9,9 @@
   <!-- <div class="flex justify-center">
     <pagination-main/>
   </div> -->
+  <div>
+    <footer-main/>
+  </div>
 </div>
 </template>
 
@@ -16,12 +19,14 @@
 // import PaginationMain from '@/components/PaginationMain.vue'
 import ListMain from '../components/ListMain.vue'
 import NavbarMain from '@/components/NavbarMain.vue'
+import FooterMain from '@/components/FooterMain.vue'
 
 export default {
   components: {
     ListMain,
     // PaginationMain,
-    NavbarMain
+    NavbarMain,
+    FooterMain
   },
   computed: {
     
